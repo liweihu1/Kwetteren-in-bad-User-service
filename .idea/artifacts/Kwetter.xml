@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Kwetter">
+    <output-path>$PROJECT_DIR$/out/artifacts/Kwetter</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Kwetteren-in-bad-User-service/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Kwetteren-in-bad-User-service" />
+          <element id="jpa-descriptors" facet="Kwetteren-in-bad-User-service/jpa/JPA" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt:0.7.0" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

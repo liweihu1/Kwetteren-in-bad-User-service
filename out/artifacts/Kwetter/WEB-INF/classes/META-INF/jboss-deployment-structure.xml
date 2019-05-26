@@ -1,0 +1,20 @@
+<jboss-deployment-structure>
+    <deployment>
+        <dependencies>
+            <module name="org.hibernate.ogm" slot="main" services="import" />
+        </dependencies>
+        <exclusions>
+            <module name="org.jboss.resteasy.resteasy-json-binding-provider"/>
+        </exclusions>
+    </deployment>
+    <sub-deployment name="mywebmodule.war">
+        <exclusions>
+            <module name="org.jboss.resteasy.resteasy-json-binding-provider"/>
+        </exclusions>
+    </sub-deployment>
+    <sub-deployment name="myejb.jar">
+        <exclusions>
+            <module name="org.jboss.resteasy.resteasy-json-binding-provider"/>
+        </exclusions>
+    </sub-deployment>
+</jboss-deployment-structure>
