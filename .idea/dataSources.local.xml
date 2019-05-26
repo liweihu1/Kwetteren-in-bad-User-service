@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="kwetterTestPU/Hibernate" uuid="cd6da043-80cb-4259-a578-c8f2f4dc200e">
+      <database-info product="H2" version="1.4.196 (2017-06-10)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.4.196 (2017-06-10)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <auth-required>false</auth-required>
+      <introspection-schemas>KWETTERTEST:PUBLIC</introspection-schemas>
+    </data-source>
+  </component>
+</project>

@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
-@Entity(name = "UserServiceUser")
+@Entity
 @NamedQueries({
-        @NamedQuery(name="user.getAll", query = "SELECT u FROM UserServiceUser u"),
-        @NamedQuery(name="user.findByUsername", query = "SELECT u FROM UserServiceUser u WHERE u.username = :username"),
-        @NamedQuery(name="user.getFollowersForId", query = "SELECT u FROM UserServiceUser u WHERE u.id IN (SELECT f.id FROM UserServiceUser u2 JOIN u2.followers f WHERE u2.id = :userId)"),
-        @NamedQuery(name="user.getFollowingForId", query = "SELECT u FROM UserServiceUser u WHERE u.id IN (SELECT f.id FROM UserServiceUser u2 JOIN u2.following f WHERE u2.id = :userId)")
+        @NamedQuery(name="user.getAll", query = "SELECT u FROM User u"),
+        @NamedQuery(name="user.findByUsername", query = "SELECT u FROM User u WHERE u.username = :username"),
+        @NamedQuery(name="user.getFollowersForId", query = "SELECT u FROM User u WHERE u.id IN (SELECT f.id FROM User u2 JOIN u2.followers f WHERE u2.id = :userId)"),
+        @NamedQuery(name="user.getFollowingForId", query = "SELECT u FROM User u WHERE u.id IN (SELECT f.id FROM User u2 JOIN u2.following f WHERE u2.id = :userId)")
 })
 public class User {
     @Id

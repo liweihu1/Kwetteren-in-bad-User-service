@@ -8,8 +8,6 @@ public class UsernameDTO {
 
     }
 
-
-
     public String getUsername() {
         return username;
     }

@@ -79,7 +79,7 @@ public class UserAPI {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllUsers(){
         List<User> users = this.userService.getAllUsers();
-        if (users.size() > 0) {
+        if (users != null) {
             return Response.ok(convertUserListToUserDTOList(users)).build();
         }
         return Response.status(Response.Status.NO_CONTENT).build();

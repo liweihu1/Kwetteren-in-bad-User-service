@@ -24,7 +24,7 @@
         <setting name="provider-name" value="" />
         <datasource-mapping>
           <factory-entry name="kwetterPU" />
-          <factory-entry name="kwetterTestPU" />
+          <factory-entry name="kwetterTestPU" value="cd6da043-80cb-4259-a578-c8f2f4dc200e" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>

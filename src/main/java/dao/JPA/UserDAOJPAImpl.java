@@ -15,7 +15,7 @@ import java.util.UUID;
 @Default
 @Named("UserDAOJPAImpl")
 public class UserDAOJPAImpl implements IUserDAO {
-    @PersistenceContext(unitName = "kwetterPU")
+    @PersistenceContext(unitName = "kwetterTestPU")
     private EntityManager em;
 
     public UserDAOJPAImpl() {
