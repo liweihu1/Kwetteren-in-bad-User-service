@@ -31,17 +31,18 @@ public class UserDAOMEMImpl implements IUserDAO {
     }
 
     @Override
+    public User getUserByUsernameAndPassword(String username, String password) {
+        return database.getUsers().stream().filter(f -> f.getUsername().equals(username) && f.getPassword().equals(password)).findAny().orElse(null);
+    }
+
+    @Override
     public void delete(User user) {
-        try{
-            database.getUsers().remove(user);
-        } catch (Exception e){
-            // TODO LOGGER
-        }
+        database.getUsers().remove(user);
     }
 
     @Override
     public boolean checkUsernameAvailable(String username) {
-        return false;
+        return database.getUsers().stream().filter(f -> f.getUsername().equals(username)).findAny().orElse(null) == null;
     }
 
     @Override

@@ -38,6 +38,17 @@ public class UserAPI {
         return Response.status(Response.Status.NO_CONTENT).build();
     }
 
+    @GET
+    @Path("/login/{username}/{password}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getUserByUsernameandPassword(@PathParam("username") String username, @PathParam("password") String password) {
+        User user = this.userService.getUserByUsernameAndPassword(username, password);
+        if (user != null) {
+            return Response.ok(new UserDTO(user)).build();
+        }
+        return Response.status(Response.Status.BAD_REQUEST).build();
+    }
+
 //    @GET
 //    @Path("/{username}")
 //    @Produces(MediaType.APPLICATION_JSON)

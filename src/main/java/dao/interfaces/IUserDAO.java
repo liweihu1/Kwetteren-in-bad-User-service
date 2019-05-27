@@ -15,6 +15,14 @@ public interface IUserDAO {
     User add(User user);
 
     /**
+     * Gets the user based on the given username and password
+     * @param username the username
+     * @param password the password
+     * @return the user if found, else null
+     */
+    User getUserByUsernameAndPassword(String username, String password);
+
+    /**
      * Deletes the given user from the database.
      * @param user The user to delete.
      */

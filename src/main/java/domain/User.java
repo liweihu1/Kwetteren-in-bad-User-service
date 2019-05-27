@@ -10,7 +10,8 @@ import java.util.UUID;
         @NamedQuery(name="user.getAll", query = "SELECT u FROM User u"),
         @NamedQuery(name="user.findByUsername", query = "SELECT u FROM User u WHERE u.username = :username"),
         @NamedQuery(name="user.getFollowersForId", query = "SELECT u FROM User u WHERE u.id IN (SELECT f.id FROM User u2 JOIN u2.followers f WHERE u2.id = :userId)"),
-        @NamedQuery(name="user.getFollowingForId", query = "SELECT u FROM User u WHERE u.id IN (SELECT f.id FROM User u2 JOIN u2.following f WHERE u2.id = :userId)")
+        @NamedQuery(name="user.getFollowingForId", query = "SELECT u FROM User u WHERE u.id IN (SELECT f.id FROM User u2 JOIN u2.following f WHERE u2.id = :userId)"),
+        @NamedQuery(name="user.findByCredentials", query = "SELECT u FROM User u WHERE u.username = :username AND u.password = :password")
 })
 public class User {
     @Id

@@ -14,6 +14,10 @@ public class UserService {
     @EJB(beanName = "UserDAOJPAImpl")
     private IUserDAO userDAO;
 
+    public User getUserByUsernameAndPassword(String username, String password) {
+        return userDAO.getUserByUsernameAndPassword(username, password);
+    }
+
     public User getUserByUsername(String username) {
         return userDAO.findByUsername(username);
     }

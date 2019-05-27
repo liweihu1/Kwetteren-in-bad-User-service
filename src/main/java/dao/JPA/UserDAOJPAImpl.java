@@ -33,6 +33,15 @@ public class UserDAOJPAImpl implements IUserDAO {
     }
 
     @Override
+    public User getUserByUsernameAndPassword(String username, String password) {
+        try {
+            return em.createNamedQuery("user.findByCredentials", User.class).setParameter("username", username).setParameter("password", password).getSingleResult();
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
+    @Override
     public void delete(User user) {
         em.remove(user);
     }
