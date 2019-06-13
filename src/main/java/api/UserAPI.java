@@ -41,7 +41,7 @@ public class UserAPI {
     @GET
     @Path("/login/{username}/{password}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getUserByUsernameandPassword(@PathParam("username") String username, @PathParam("password") String password) {
+    public Response getUserByUsernameAndPassword(@PathParam("username") String username, @PathParam("password") String password) {
         User user = this.userService.getUserByUsernameAndPassword(username, password);
         if (user != null) {
             return Response.ok(new UserDTO(user)).build();

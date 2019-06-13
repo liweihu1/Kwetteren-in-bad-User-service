@@ -8,7 +8,7 @@
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <!--JDBC-->
-            <property name="hibernate.connection.url" value="jdbc:h2:mem:kwetterTest"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:user"/>
             <property name="hibernate.connection.driver" value="org.h2.Driver"/>
             <property name="hibernate.connection.username" value="root"/>
             <property name="hibernate.connection.password" value="root"/>

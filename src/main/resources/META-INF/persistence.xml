@@ -3,12 +3,12 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
     <persistence-unit name="kwetterTestPU" transaction-type="JTA">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
+        <jta-data-source>java:jboss/datasources/kwetterUserService</jta-data-source>
         <class>domain.User</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <!--JDBC-->
-            <property name="hibernate.connection.url" value="jdbc:h2:mem:kwetterTest"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:user"/>
             <property name="hibernate.connection.driver" value="org.h2.Driver"/>
             <property name="hibernate.connection.username" value="root"/>
             <property name="hibernate.connection.password" value="root"/>
